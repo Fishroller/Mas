@@ -9,23 +9,59 @@ public class MonthServiceTest {
         MonthService service = new MonthService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int actualMonthSum = service.sum(sales);
-        int actualMonthMax = service.MaxSales(sales);
-        int actualMonthMin = service.MinSales(sales);
-        int actualMonthAverage = service.average(sales);
-        int actualMonthAverageMin = service.averageMin(sales);
-        int actualMonthAverageMax = service.averageMax(sales);
         int expectedMonthSum = 180;
-        int expectedMonthMax = 8;
-        int expectedMonthMin = 9;
-        int expectedMonthAverage = 15;
-        int expectedMonthAverageMin = 5;
-        int expectedMonthAverageMax = 5;
         Assertions.assertEquals(expectedMonthSum, actualMonthSum);
+
+    }
+
+    @Test
+    public void ShouldMaxMonthSales() {
+        MonthService service = new MonthService();
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int actualMonthMax = service.maxSales(sales);
+        int expectedMonthMax = 8;
         Assertions.assertEquals(expectedMonthMax, actualMonthMax);
+
+    }
+
+    @Test
+    public void ShouldMinMonthSales() {
+        MonthService service = new MonthService();
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int actualMonthMin = service.minSales(sales);
+        int expectedMonthMin = 9;
         Assertions.assertEquals(expectedMonthMin, actualMonthMin);
+
+    }
+
+    @Test
+    public void ShouldAverageMonthSales() {
+        MonthService service = new MonthService();
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int actualMonthAverage = service.average(sales);
+        int expectedMonthAverage = 15;
         Assertions.assertEquals(expectedMonthAverage, actualMonthAverage);
-        Assertions.assertEquals(expectedMonthAverageMin, actualMonthAverageMin);
+
+    }
+
+    @Test
+    public void ShouldAverageMaxMonthSales() {
+        MonthService service = new MonthService();
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int actualMonthAverageMax = service.averageMax(sales);
+        int expectedMonthAverageMax = 5;
         Assertions.assertEquals(expectedMonthAverageMax, actualMonthAverageMax);
+
+    }
+
+    @Test
+    public void ShouldAverageMinMonthSales() {
+        MonthService service = new MonthService();
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int actualMonthAverageMin = service.averageMin(sales);
+        int expectedMonthAverageMin = 5;
+        Assertions.assertEquals(expectedMonthAverageMin, actualMonthAverageMin);
+
 
     }
 }

@@ -2,56 +2,56 @@ package ru.netology.javaqa.javaqamvn.services;
 
 public class MonthService {
     public int sum(int[] SumSales) {
-        int SumMonth = 0;
+        int sumMonth = 0;
         for (int i = 0; i < SumSales.length; i++) {
-            SumMonth = SumMonth + SumSales[i];
+            sumMonth = sumMonth + SumSales[i];
         }
-        System.out.println(SumMonth);
+        System.out.println(sumMonth);
 
-        return SumMonth;
+        return sumMonth;
     }
 
 
-    public int MinSales(int[] sales) {
+    public int minSales(int[] sales) {
 
-        int MinMonth = 0;
+        int minMonth = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= sales[MinMonth]) {
-                MinMonth = i;
+            if (sales[i] <= sales[minMonth]) {
+                minMonth = i;
             }
         }
-        System.out.println(MinMonth + 1);
-        return MinMonth + 1;
+        System.out.println(minMonth + 1);
+        return minMonth + 1;
     }
 
-    public int MaxSales(int[] sales) {
-        int MaxMonth = 0;
+    public int maxSales(int[] sales) {
+        int maxMonth = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] >= sales[MaxMonth]) {
-                MaxMonth = i;
+            if (sales[i] >= sales[maxMonth]) {
+                maxMonth = i;
             }
         }
-        System.out.println(MaxMonth + 1);
-        return MaxMonth + 1;
+        System.out.println(maxMonth + 1);
+        return maxMonth + 1;
     }
 
     public int average(int[] SumSales) {
-        int SumMonth = 0;
+        int sumMonth = 0;
         for (int i = 0; i < SumSales.length; i++) {
-            SumMonth = SumMonth + SumSales[i];
+            sumMonth = sumMonth + SumSales[i];
         }
-        int AverageSales = SumMonth / SumSales.length;
+        int AverageSales = sumMonth / SumSales.length;
         System.out.println(AverageSales);
 
         return AverageSales;
     }
 
     public int averageMin(int[] SumSales) {
-        int SumMonth = 0;
+        int sumMonth = 0;
         for (int i = 0; i < SumSales.length; i++) {
-            SumMonth = SumMonth + SumSales[i];
+            sumMonth = sumMonth + SumSales[i];
         }
-        int AverageSales = SumMonth / SumSales.length;
+        int AverageSales = sumMonth / SumSales.length;
         int lowSales = 0;
         for (int i = 0; i < SumSales.length; i++) {
             if (SumSales[i] < AverageSales) {
@@ -65,11 +65,11 @@ public class MonthService {
     }
 
     public int averageMax(int[] SumSales) {
-        int SumMonth = 0;
+        int sumMonth = 0;
         for (int i = 0; i < SumSales.length; i++) {
-            SumMonth = SumMonth + SumSales[i];
+            sumMonth = sumMonth + SumSales[i];
         }
-        int AverageSales = SumMonth / SumSales.length;
+        int AverageSales = sumMonth / SumSales.length;
         int HighSales = 0;
         for (int i = 0; i < SumSales.length; i++) {
             if (SumSales[i] > AverageSales) {
