@@ -35,14 +35,11 @@ public class MonthService {
     public int average(int[] sumSales) {
         int sumMonth = sum(sumSales);
         int averageSales = sumMonth / sumSales.length;
-
-
         return averageSales;
     }
 
     public int averageMin(int[] sumSales) {
-        int sumMonth = sum(sumSales);
-        int averageSales = sumMonth / sumSales.length;
+        int averageSales = average(sumSales);
         int lowSales = 0;
         for (int i = 0; i < sumSales.length; i++) {
             if (sumSales[i] < averageSales) {
@@ -55,8 +52,7 @@ public class MonthService {
     }
 
     public int averageMax(int[] sumSales) {
-        int sumMonth = sum(sumSales);
-        int averageSales = sumMonth / sumSales.length;
+        int averageSales = average(sumSales);
         int highSales = 0;
         for (int i = 0; i < sumSales.length; i++) {
             if (sumSales[i] > averageSales) {
